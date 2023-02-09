@@ -84,8 +84,9 @@ pipeline{
         stage ('deploy on tomcat') {
             steps {
                 script {
-                    deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', path: '', url: 'http://65.2.190.77:2020/')],
-                        contextPath: 'http:65.2.190.77:2020/buddipammu/', 
+                    deploy adapters: [tomcat8(credentialsId: 'tomcat-credentials', 
+                                              path: '', url: 'http://65.2.190.77:2020/')], 
+                        contextPath: 'http://65.2.190.77:2020/buddipammu/', 
                         war: '**/*.war'
                 }
             }
