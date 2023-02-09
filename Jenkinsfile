@@ -65,7 +65,7 @@ pipeline{
                         [
                             [artifactId: 'buddipammu', 
                              classifier: '',
-                             file: 'buddipammu',
+                             file: 'target/buddipammu.war',
                              type: 'war'
                             ]
                         ], 
